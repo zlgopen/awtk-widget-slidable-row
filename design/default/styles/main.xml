@@ -1,0 +1,32 @@
+<slidable_row>
+  <style name="odd">
+    <normal bg_color="#fafafa" />
+  </style>
+  <style name="even">
+    <normal bg_color="#f0f0f0" />
+  </style>
+</slidable_row>
+
+<label>
+  <style name="title" text_align_h="left" margin="2" icon="logo" icon_at="left">
+    <normal text_color="black"/>
+  </style>
+</label>
+
+<button>
+  <style name="remove">
+    <normal text_color="white" bg_color="#aa0000" />
+    <over text_color="#ffffff" bg_color="#bb0000"/>
+  </style>
+  <style name="mark">
+    <normal text_color="#ffffff" bg_color="#1971dd"/>
+    <over text_color="#ffffff" bg_color="#2075e0"/>
+  </style>
+</button>
+
+<confirmable_button>
+  <style name="remove">
+    <normal text_color="white" bg_color="#aa0000" />
+    <over text_color="#ffffff" bg_color="#bb0000"/>
+  </style>
+</confirmable_button>

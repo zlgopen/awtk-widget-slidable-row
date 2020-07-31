@@ -1,0 +1,106 @@
+<window theme="main" >
+  <list_view x="5"  y="5" w="-10" h="-80" item_height="40">
+    <scroll_view name="view" x="0"  y="0" w="100%" h="100%"> 
+      <slidable_row style="even">
+        <label name="title"  style="title" text="1.Supported embedded applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <confirmable_button w="80" name="confirm_remove" style="remove" tr_text="Remove" popup_win_w="208"/>
+      </slidable_row>
+      <slidable_row style="odd">
+        <label name="title"  style="title" text="2.Supported Linux applications"/>
+        <confirmable_button w="80" name="confirm_remove" style="remove" tr_text="Remove" popup_win_w="208"
+          popup_to_right="true"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+      </slidable_row>
+      <slidable_row style="even">
+        <label name="title"  style="title" text="3.Supported MacOS applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+      <slidable_row style="odd">
+        <label name="title"  style="title" text="4.Supported Windows applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+      <slidable_row style="even">
+        <label name="title"  style="title" text="5.Supported Web applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+      <slidable_row style="odd">
+        <label name="title"  style="title" text="6.Supported Android applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+      <slidable_row style="even">
+        <label name="title"  style="title" text="7.Supported iOS applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+      <slidable_row style="odd">
+        <label name="title"  style="title" text="2.Supported Linux applications"/>
+        <confirmable_button w="80" name="confirm_remove" style="remove" tr_text="Remove" popup_win_w="208"
+          popup_to_right="true"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+      </slidable_row>
+      <slidable_row style="even">
+        <label name="title"  style="title" text="3.Supported MacOS applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+      <slidable_row style="odd">
+        <label name="title"  style="title" text="4.Supported Windows applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+      <slidable_row style="even">
+        <label name="title"  style="title" text="5.Supported Web applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+      <slidable_row style="odd">
+        <label name="title"  style="title" text="6.Supported Android applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+      <slidable_row style="even">
+        <label name="title"  style="title" text="7.Supported iOS applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+      <slidable_row style="odd">
+        <label name="title"  style="title" text="2.Supported Linux applications"/>
+        <confirmable_button w="80" name="confirm_remove" style="remove" tr_text="Remove" popup_win_w="208"
+          popup_to_right="true"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+      </slidable_row>
+      <slidable_row style="even">
+        <label name="title"  style="title" text="3.Supported MacOS applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+      <slidable_row style="odd">
+        <label name="title"  style="title" text="4.Supported Windows applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+      <slidable_row style="even">
+        <label name="title"  style="title" text="5.Supported Web applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+      <slidable_row style="odd">
+        <label name="title"  style="title" text="6.Supported Android applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+      <slidable_row style="even">
+        <label name="title"  style="title" text="7.Supported iOS applications"/>
+        <button name="mark" style="mark" tr_text="Mark As Read" w="128"/>
+        <button name="remove" style="remove" tr_text="Remove" w="80"/>
+      </slidable_row>
+    </scroll_view>
+    <scroll_bar_m name="bar" x="right" y="0" w="6" h="100%" value="0"/>
+  </list_view>
+  <button name="close" x="center" y="bottom:10" w="50%" h="30" text="close"/>
+</window>

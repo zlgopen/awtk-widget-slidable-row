@@ -1,0 +1,11 @@
+LIBRARY   slidable_row
+EXPORTS
+    confirmable_button_register @1
+    slidable_row_register @2
+    confirmable_button_create @3
+    confirmable_button_cast @4
+    confirmable_button_set_popup_win_w @5
+    confirmable_button_set_popup_to_right @6
+    slidable_row_create @7
+    slidable_row_cast @8
+    slidable_row_set_xoffset @9

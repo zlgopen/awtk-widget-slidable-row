@@ -5,21 +5,6 @@
       "global": true
     },
     "desc": "注册控件。",
-    "name": "confirmable_button_register",
-    "return": {
-      "type": "ret_t",
-      "desc": "返回RET_OK表示成功，否则表示失败。"
-    },
-    "type": "method",
-    "header": "src/confirmable_button_register.h",
-    "level": 1
-  },
-  {
-    "params": [],
-    "annotation": {
-      "global": true
-    },
-    "desc": "注册控件。",
     "name": "slidable_row_register",
     "return": {
       "type": "ret_t",

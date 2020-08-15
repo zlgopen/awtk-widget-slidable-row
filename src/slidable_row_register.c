@@ -24,7 +24,10 @@
 #include "slidable_row_register.h"
 #include "base/widget_factory.h"
 #include "slidable_row/slidable_row.h"
+#include "confirmable_button/confirmable_button.h"
 
 ret_t slidable_row_register(void) {
+  widget_factory_register(widget_factory(), WIDGET_TYPE_CONFIRMABLE_BUTTON,
+                                 confirmable_button_create);
   return widget_factory_register(widget_factory(), WIDGET_TYPE_SLIDABLE_ROW, slidable_row_create);
 }

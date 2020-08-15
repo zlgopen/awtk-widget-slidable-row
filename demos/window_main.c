@@ -1,6 +1,5 @@
 ﻿#include "awtk.h"
 #include "slidable_row_register.h"
-#include "confirmable_button_register.h"
 
 static ret_t on_close(void* ctx, event_t* e) {
   tk_quit();
@@ -50,7 +49,6 @@ static ret_t on_widget(void* ctx, const void* data) {
  */
 ret_t application_init(void) {
   slidable_row_register();
-  confirmable_button_register();
 
   widget_t* win = window_open("main");
   widget_child_on(win, "close", EVT_CLICK, on_close, NULL); 

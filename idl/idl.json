@@ -15,6 +15,21 @@
     "level": 1
   },
   {
+    "params": [],
+    "annotation": {
+      "global": true
+    },
+    "desc": "获取支持的渲染模式。",
+    "name": "slidable_row_supported_render_mode",
+    "return": {
+      "type": "const char*",
+      "desc": "返回渲染模式。"
+    },
+    "type": "method",
+    "header": "src/slidable_row_register.h",
+    "level": 1
+  },
+  {
     "type": "class",
     "methods": [
       {
@@ -152,7 +167,7 @@
       }
     ],
     "header": "confirmable_button/confirmable_button.h",
-    "desc": "可确认的按钮。点击按钮时，弹出一个窗口，再次点击时，才触发CLICK事件。",
+    "desc": "可确认的按钮。点击按钮时，弹出一个窗口，再次点击时，才触发CLICK事件。\n\n在xml中使用\"confirmable\\_button\"标签创建可确认的按钮控件。如：\n\n```xml\n<!-- ui -->\n<confirmable_button w=\"120\" h=\"36\" tr_text=\"ConfirmableButton\" popup_win_w=\"208\"/>\n```\n\n可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：\n\n```xml\n<!-- style -->\n<confirmable_button>\n<style name=\"default\" text_color=\"#ffffff\">\n<normal bg_color=\"#cc0000\"/>\n</style>\n</confirmable_button>\n```",
     "name": "confirmable_button_t",
     "parent": "widget_t",
     "annotation": {
@@ -264,7 +279,7 @@
       }
     ],
     "header": "slidable_row/slidable_row.h",
-    "desc": "slidable row(仿微信列表项目，像左滑动显示“删除”按钮)。",
+    "desc": "slidable row(仿微信列表项目，像左滑动显示“删除”按钮)。\n\n在xml中使用\"slidable\\_row\"标签创建仿微信列表项目控件。如：\n\n```xml\n<!-- ui -->\n<slidable_row w=\"200\" h=\"28\">\n<label name=\"title\" text=\"title\"/>\n<button name=\"mark\" w=\"100\" style=\"mark_as_read\" tr_text=\"Mark As Read\"/>\n<confirmable_button name=\"confirm_remove\" w=\"50\" tr_text=\"Remove\" popup_win_w=\"208\"/>\n</slidable_row>\n```\n\n可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：\n\n```xml\n<!-- style -->\n<slidable_row>\n<style name=\"default\" border_color=\"#E9E9E9\">\n<normal bg_color=\"#F4F4F4\"/>\n</style>\n</slidable_row>\n<button>\n<style name=\"mark_as_read\" bg_color=\"#F4F4F4\" border_color=\"#338FFF\" text_color=\"#444444\">\n<normal border_color=\"#C2C2C2\"/>\n<disable bg_color=\"#F4F4F466\" border_color=\"#C2C2C266\" text_color=\"#44444466\"/>\n<focused/>\n<over bg_color=\"#338FFF\" text_color=\"#FFFFFF\"/>\n<pressed bg_color=\"#1971DD\" border_color=\"#1971DD\" text_color=\"#FFFFFF\"/>\n</style>\n</button>\n<confirmable_button>\n<style name=\"default\" text_color=\"#ffffff\">\n<normal bg_color=\"#cc0000\"/>\n</style>\n</confirmable_button>\n```",
     "name": "slidable_row_t",
     "parent": "widget_t",
     "annotation": {

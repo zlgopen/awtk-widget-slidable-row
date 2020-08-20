@@ -31,6 +31,42 @@ BEGIN_C_DECLS
  * @parent widget_t
  * @annotation ["scriptable","design","widget"]
  * slidable row(仿微信列表项目，像左滑动显示“删除”按钮)。
+ *
+ * 在xml中使用"slidable\_row"标签创建仿微信列表项目控件。如：
+ *
+ * ```xml
+ * <!-- ui -->
+ * <slidable_row w="200" h="28">
+ *   <label name="title" text="title"/>
+ *   <button name="mark" w="100" style="mark_as_read" tr_text="Mark As Read"/>
+ *   <confirmable_button name="confirm_remove" w="50" tr_text="Remove" popup_win_w="208"/>
+ * </slidable_row>
+ * ```
+ *
+ * 可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
+ *
+ * ```xml
+ * <!-- style -->
+ * <slidable_row>
+ *   <style name="default" border_color="#E9E9E9">
+ *     <normal bg_color="#F4F4F4"/>
+ *   </style>
+ * </slidable_row>
+ * <button>
+ *   <style name="mark_as_read" bg_color="#F4F4F4" border_color="#338FFF" text_color="#444444">
+ *     <normal border_color="#C2C2C2"/>
+ *     <disable bg_color="#F4F4F466" border_color="#C2C2C266" text_color="#44444466"/>
+ *     <focused/>
+ *     <over bg_color="#338FFF" text_color="#FFFFFF"/>
+ *     <pressed bg_color="#1971DD" border_color="#1971DD" text_color="#FFFFFF"/>
+ *   </style>
+ * </button>
+ * <confirmable_button>
+ *   <style name="default" text_color="#ffffff">
+ *     <normal bg_color="#cc0000"/>
+ *   </style>
+ * </confirmable_button>
+ * ```
  */
 typedef struct _slidable_row_t {
   widget_t widget;

@@ -30,6 +30,24 @@ BEGIN_C_DECLS
  * @parent widget_t
  * @annotation ["scriptable","design","widget"]
  * 可确认的按钮。点击按钮时，弹出一个窗口，再次点击时，才触发CLICK事件。
+ *
+ * 在xml中使用"confirmable\_button"标签创建可确认的按钮控件。如：
+ *
+ * ```xml
+ * <!-- ui -->
+ * <confirmable_button w="120" h="36" tr_text="ConfirmableButton" popup_win_w="208"/>
+ * ```
+ *
+ * 可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
+ *
+ * ```xml
+ * <!-- style -->
+ * <confirmable_button>
+ *   <style name="default" text_color="#ffffff">
+ *     <normal bg_color="#cc0000"/>
+ *   </style>
+ * </confirmable_button>
+ * ```
  */
 typedef struct _confirmable_button_t {
   widget_t widget;

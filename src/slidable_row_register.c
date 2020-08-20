@@ -28,6 +28,10 @@
 
 ret_t slidable_row_register(void) {
   widget_factory_register(widget_factory(), WIDGET_TYPE_CONFIRMABLE_BUTTON,
-                                 confirmable_button_create);
+                          confirmable_button_create);
   return widget_factory_register(widget_factory(), WIDGET_TYPE_SLIDABLE_ROW, slidable_row_create);
+}
+
+const char* slidable_row_supported_render_mode(void) {
+  return "OpenGL|AGGE-BGR565|AGGE-BGRA8888|AGGE-MONO";
 }

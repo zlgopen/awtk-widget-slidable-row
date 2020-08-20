@@ -36,6 +36,16 @@ BEGIN_C_DECLS
  */
 ret_t slidable_row_register(void);
 
+/**
+ * @method  slidable_row_supported_render_mode
+ * 获取支持的渲染模式。
+ *
+ * @annotation ["global"]
+ *
+ * @return {const char*} 返回渲染模式。
+ */
+const char* slidable_row_supported_render_mode(void);
+
 END_C_DECLS
 
 #endif /*TK_SLIDABLE_ROW_REGISTER_H*/

@@ -60,7 +60,6 @@ static ret_t confirmable_button_get_prop(widget_t* widget, const char* name, val
 }
 
 static ret_t confirmable_button_set_prop(widget_t* widget, const char* name, const value_t* v) {
-  confirmable_button_t* confirmable_button = CONFIRMABLE_BUTTON(widget);
   return_value_if_fail(widget != NULL && name != NULL && v != NULL, RET_BAD_PARAMS);
 
   if (tk_str_eq(CONFIRMABLE_BUTTON_PROP_POPUP_WIN_W, name)) {
@@ -108,7 +107,6 @@ static ret_t popup_on_resize(void* ctx, event_t* e) {
 
 static ret_t confirmable_button_on_clicked(void* ctx, event_t* e) {
   widget_t* widget = WIDGET(ctx);
-  pointer_event_t* evt = pointer_event_cast(e);
   pointer_event_t click = *pointer_event_cast(e);
 
   click.e.target = ctx;
@@ -123,6 +121,7 @@ static ret_t confirmable_button_confirm(widget_t* widget) {
   widget_t* button_in_popup = NULL;
   widget_t* button = widget;
   widget_t* win = widget_get_window(widget);
+  const char* theme = widget_get_prop_str(win, WIDGET_PROP_THEME, NULL);
   confirmable_button_t* confirmable_button = CONFIRMABLE_BUTTON(widget);
   int32_t popup_w = tk_max(confirmable_button->popup_win_w, widget->w);
 
@@ -130,7 +129,7 @@ static ret_t confirmable_button_confirm(widget_t* widget) {
   popup = popup_create(NULL, p.x, p.y, widget->w, widget->h);
   return_value_if_fail(popup != NULL, RET_OOM);
 
-  widget_set_prop_str(popup, WIDGET_PROP_THEME, widget_get_prop_str(win, WIDGET_PROP_THEME, NULL));
+  widget_set_prop_str(popup, WIDGET_PROP_THEME, theme  != NULL ? theme : win->name);
   popup_set_close_when_click(popup, TRUE);
   button_in_popup = widget_clone(button, popup);
   widget_set_self_layout_params(button_in_popup, "0", "0", "100%", "100%");
@@ -173,7 +172,6 @@ static ret_t confirmable_button_on_event(widget_t* widget, event_t* e) {
       return RET_STOP;
     }
     case EVT_POINTER_DOWN_ABORT: {
-      pointer_event_t* evt = pointer_event_cast(e);
       confirmable_button->pressed = FALSE;
       break;
     }

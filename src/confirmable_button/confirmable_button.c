@@ -184,6 +184,7 @@ static ret_t confirmable_button_on_event(widget_t* widget, event_t* e) {
         if (confirmable_button->in_popup) {
           pointer_event_t evt = *(pointer_event_t*)e;
           evt.e = event_init(EVT_CLICK, widget);
+          evt.e.size = sizeof(pointer_event_t);
           widget_dispatch(widget, (event_t*)&evt);
         } else {
           confirmable_button_confirm(widget);

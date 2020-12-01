@@ -62,7 +62,9 @@ static ret_t slidable_row_set_prop(widget_t* widget, const char* name, const val
 
 static ret_t slidable_row_on_detach_parent(widget_t* widget, widget_t* parent) {
   widget_t* win = widget_get_window(parent);
-  widget_off_by_ctx(win, widget);
+  if (win != NULL) {
+    widget_off_by_ctx(win, widget);
+  }
 
   return RET_OK;
 }

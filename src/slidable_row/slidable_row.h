@@ -121,7 +121,7 @@ widget_t* slidable_row_cast(widget_t* widget);
  */
 ret_t slidable_row_set_xoffset(widget_t* widget, int32_t xoffset);
 
-#define SLIDABLE_ROW_PROP_XOFFSET "xoffset"
+#define SLIDABLE_ROW_PROP_XOFFSET "slidable_row_xoffset"
 
 #define WIDGET_TYPE_SLIDABLE_ROW "slidable_row"
 

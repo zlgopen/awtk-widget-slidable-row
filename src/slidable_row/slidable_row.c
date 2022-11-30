@@ -22,7 +22,7 @@
 #include "tkc/mem.h"
 #include "tkc/utils.h"
 #include "slidable_row.h"
-#include "widget_animators/widget_animator_scroll.h"
+#include "widget_animators/widget_animator_prop.h"
 
 static int32_t slidable_row_get_max_xoffset(widget_t* widget);
 static ret_t slidable_row_scroll_to_xoffset(widget_t* widget, int32_t xoffset);
@@ -177,10 +177,10 @@ static ret_t slidable_row_scroll_to_xoffset(widget_t* widget, int32_t xoffset) {
     return RET_OK;
   }
 
-  slidable_row->wa = widget_animator_scroll_create(widget, TK_ANIMATING_TIME, 0, EASING_SIN_INOUT);
+  slidable_row->wa = widget_animator_prop_create(widget, TK_ANIMATING_TIME, 0, EASING_SIN_INOUT, SLIDABLE_ROW_PROP_XOFFSET);
   return_value_if_fail(slidable_row->wa != NULL, RET_OOM);
 
-  widget_animator_scroll_set_params(slidable_row->wa, slidable_row->xoffset, 0, xoffset, 0);
+  widget_animator_prop_set_params(slidable_row->wa, slidable_row->xoffset, xoffset);
   widget_animator_on(slidable_row->wa, EVT_ANIM_END, slidable_row_on_scroll_done, slidable_row);
   widget_animator_start(slidable_row->wa);
 

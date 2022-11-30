@@ -6,6 +6,8 @@ EXPORTS
     confirmable_button_cast
     confirmable_button_set_popup_win_w
     confirmable_button_set_popup_to_right
+    confirmable_button_get_widget_vtable
     slidable_row_create
     slidable_row_cast
     slidable_row_set_xoffset
+    slidable_row_get_widget_vtable

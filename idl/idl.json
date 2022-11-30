@@ -135,6 +135,16 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [],
+        "annotation": {},
+        "desc": "获取 confirmable_button 虚表。",
+        "name": "confirmable_button_get_widget_vtable",
+        "return": {
+          "type": "const widget_vtable_t*",
+          "desc": "成功返回 confirmable_button 虚表。"
+        }
       }
     ],
     "events": [],
@@ -259,6 +269,16 @@
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [],
+        "annotation": {},
+        "desc": "获取 slidable_row 虚表。",
+        "name": "slidable_row_get_widget_vtable",
+        "return": {
+          "type": "const widget_vtable_t*",
+          "desc": "成功返回 slidable_row 虚表。"
         }
       }
     ],

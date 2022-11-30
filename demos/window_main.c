@@ -7,6 +7,12 @@ static ret_t on_close(void* ctx, event_t* e) {
   return RET_OK;
 }
 
+static ret_t on_label_point_up(void* ctx, event_t* e) {
+  widget_t* label = WIDGET(e->target);
+  printf("on_label_point_up \r\n");
+  return RET_OK;
+}
+
 static ret_t on_confirm_remove(void* ctx, event_t* e) {
   widget_t* button = WIDGET(e->target);
 
@@ -39,6 +45,8 @@ static ret_t on_widget(void* ctx, const void* data) {
     widget_on(widget, EVT_CLICK, on_mark_as_read, NULL);
   } else if(tk_str_eq(widget->name, "confirm_remove")) {
     widget_on(widget, EVT_CLICK, on_confirm_remove, NULL);
+  } else if(tk_str_eq(widget->name, "title")) {
+    widget_on(widget, EVT_POINTER_UP, on_label_point_up, NULL);
   }
 
   return RET_OK;
